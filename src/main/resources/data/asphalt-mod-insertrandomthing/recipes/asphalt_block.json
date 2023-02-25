@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:sand"
+        },
+        {
+            "item": "minecraft:gravel"
+        },
+        {
+            "item": "minecraft:cobblestone"
+        },
+        {
+            "item": "minecraft:sand"
+        },
+        {
+            "item": "minecraft:gravel"
+        },
+        {
+            "item": "minecraft:cobblestone"
+        },
+        {
+            "item": "minecraft:sand"
+        },
+        {
+            "item": "minecraft:gravel"
+        },
+        {
+            "item": "minecraft:cobblestone"
+        }
+    ],
+    "result": {
+        "item": "asphalt-mod-insertrandomthing:asphalt_block",
+        "count": 9
+    }
+}

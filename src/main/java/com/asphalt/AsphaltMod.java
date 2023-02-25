@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -24,9 +25,10 @@ public class AsphaltMod implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("asphalt-or-oswald-who-knows");
     public static final String NAMESPACE = "asphalt-mod-insertrandomthing";
     public static final Item CUSTOM_ITEM = new Item(new FabricItemSettings());
-    public static final Block EXAMPLE_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f));
+    public static final Block CUSTOM_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool());
+   public static final Item asphaltBlockItem = Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "asphalt_block"), new BlockItem(CUSTOM_BLOCK, new FabricItemSettings()));
     public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder(new Identifier(NAMESPACE, "general"))
-            .icon(() -> new ItemStack(CUSTOM_ITEM))
+            .icon(() -> new ItemStack(asphaltBlockItem))
             .build();
 
     @Override
@@ -36,11 +38,11 @@ public class AsphaltMod implements ModInitializer {
         // Proceed with mild caution.
 
         LOGGER.info("Hello Fabric world!");
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "asphalt_block"), EXAMPLE_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "asphalt_block"), CUSTOM_BLOCK);
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "paint_brush"), CUSTOM_ITEM);
         ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP).register(content -> {
             content.add(CUSTOM_ITEM);
-            content.add(CUSTOM_ITEM);
+            content.add(asphaltBlockItem);
         });
     }
 }

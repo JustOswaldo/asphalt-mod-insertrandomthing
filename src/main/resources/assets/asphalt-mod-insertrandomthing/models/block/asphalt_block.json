@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "asphalt-mod-insertrandomthing:block/asphalt_block"
+  }
+}
