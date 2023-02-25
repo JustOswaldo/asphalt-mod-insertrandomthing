@@ -16,10 +16,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.asphalt.ExampleMod"
-		],
-		"client": [
-			"com.asphalt.ExampleModClient"
+			"com.asphalt.AsphaltMod"
 		]
 	},
 	"mixins": [
