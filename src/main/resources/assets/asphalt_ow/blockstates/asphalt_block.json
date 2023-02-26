@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": { "model": "asphalt_ow:block/asphalt_block" }
-  }
+    "vertical_b=false,horizontal_b=false": { "model": "asphalt_ow:block/asphalt_block" },
+    "vertical_b=true,horizontal_b=false": { "model": "asphalt_ow:block/asphalt_striped_vertical_white" },
+    "vertical_b=false,horizontal_b=true": { "model": "asphalt_ow:block/asphalt_striped_horizontal_white" },
+    "vertical_b=true,horizontal_b=true": { "model": "asphalt_ow:block/asphalt_striped_crossed_white" }
+}
 }
