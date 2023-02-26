@@ -1,11 +1,11 @@
 {
 	"schemaVersion": 1,
-	"id": "asphalt-or-oswald-who-knows",
+	"id": "asphalt_ow",
 	"version": "${version}",
-	"name": "Asphalt or Oswald who knows",
+	"name": "Asphalt",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"JustOswaldo!"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -19,13 +19,6 @@
 			"com.asphalt.AsphaltMod"
 		]
 	},
-	"mixins": [
-		"asphalt-or-oswald-who-knows.mixins.json",
-		{
-			"config": "asphalt-or-oswald-who-knows.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.14.14",
 		"minecraft": "~1.19.3",

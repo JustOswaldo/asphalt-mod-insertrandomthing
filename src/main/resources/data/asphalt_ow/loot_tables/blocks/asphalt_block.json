@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "asphalt-mod-insertrandomthing:asphalt_block"
+          "name": "asphalt_ow:asphalt_block"
         }
       ],
       "conditions": [

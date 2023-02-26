@@ -1,0 +1,10 @@
+{
+  "block.asphalt_ow.asphalt_block": "Asphalt Block",
+  "block.asphalt_ow.slightly_cracked_asphalt_block": "Slightly Cracked Asphalt Block",
+  "block.asphalt_ow.cracked_asphalt_block": "Cracked Asphalt Block",
+  "itemGroup.asphalt_ow.general": "Asphalt",
+  "item.asphalt_ow.paint_brush": "White Paint Brush",
+  "item.asphalt_ow.paint_brush_black": "Black Paint Brush",
+  "item.asphalt_ow.tool_tip.paint_brush": "Right click on a asphalt block to add a coloured stripe."
+
+}
