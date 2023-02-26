@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "asphalt-mod-insertrandomthing:item/paint_brush"
+    "layer0": "asphalt-mod-insertrandomthing:item/paint_brush_white"
   }
 }
