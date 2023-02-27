@@ -17,6 +17,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -56,6 +57,9 @@ public class AsphaltMod implements ModInitializer {
     public static final Item SlightCrackedAsphaltBlockItem = Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "slightly_cracked_asphalt_block"), new BlockItem(SLIGHTLY_CRACKED_BLOCK, new FabricItemSettings()));
     public static final Item CrackedAsphaltBlockItem = Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cracked_asphalt_block"), new BlockItem(CRACKED_ASPHALT_BLOCK, new FabricItemSettings()));
     public static final ItemGroup ITEM_GROUP = FabricItemGroup.builder(new Identifier(NAMESPACE, "general")).icon(() -> new ItemStack(asphaltBlockItem)).build();
+    //sound effects
+    public static final Identifier BRUSH_STROKE_SOUND = new Identifier("asphalt_ow:brush_stroke");
+    public static SoundEvent BRUSH_STROKE_SOUND_EVENT = SoundEvent.of(BRUSH_STROKE_SOUND);
 
     @Override
     public void onInitialize() {
@@ -64,6 +68,7 @@ public class AsphaltMod implements ModInitializer {
         // Proceed with mild caution.
 
         LOGGER.info("Hello Fabric world!");
+        Registry.register(Registries.SOUND_EVENT, AsphaltMod.BRUSH_STROKE_SOUND, BRUSH_STROKE_SOUND_EVENT);
 
         ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP).register(content -> {
             //Paint Brush

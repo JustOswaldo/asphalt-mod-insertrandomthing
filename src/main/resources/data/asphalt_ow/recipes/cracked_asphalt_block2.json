@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "asphalt-ow:slightly_cracked_asphalt_block"
+    },
+    "result": "asphalt_ow:cracked_asphalt_block",
+    "count": 1
+}

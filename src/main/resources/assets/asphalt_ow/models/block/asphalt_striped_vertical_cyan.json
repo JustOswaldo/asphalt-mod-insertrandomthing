@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "asphalt_ow:block/asphalt_striped_vertical_cyan"
+  }
+}

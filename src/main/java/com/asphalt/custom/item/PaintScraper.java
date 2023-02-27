@@ -26,10 +26,12 @@ public class PaintScraper extends Item {
     public ActionResult useOnBlock(ItemUsageContext context) {
         var world = context.getWorld();
         var blockState = world.getBlockState(context.getBlockPos());
-        world.setBlockState(context.getBlockPos(),blockState.with(VERTICAL_B, false));
-        world.setBlockState(context.getBlockPos(),blockState.with(HORIZONTAL_B, false));
-        return ActionResult.PASS;
+        if (blockState.getBlock() == ASPHALT_BLOCK){
+
+            world.setBlockState(context.getBlockPos(),blockState.with(VERTICAL_B, false).with(HORIZONTAL_B, false));
         }
+        return ActionResult.PASS;
+    }
 
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
